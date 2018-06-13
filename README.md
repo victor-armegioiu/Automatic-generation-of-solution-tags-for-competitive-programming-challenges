@@ -1,0 +1,1 @@
+# Automatic-generation-of-solution-tags-for-competitive-programming-challenges

@@ -60,7 +60,7 @@ def get_problem_texts():
 		lines = ' '.join([line for line in lines if line.isalpha()])
 
 		documents.append(lines)
-	
+		
 	return documents
 
 def get_lemmatized_tokens(problem_text):
@@ -88,12 +88,12 @@ if __name__ == '__main__':
 	for i in range(len(texts)):
 		texts[i] = ['_'.join(w) for w in ngrams(texts[i], 2)]
 
-	
 	for text in texts:
 		print(text)
 		print(100 * '_')
 	# Create Dictionary.
 	id2word = corpora.Dictionary(texts)
+	
 	# Creates the Bag of Word corpus.
 	mm = [id2word.doc2bow(text) for text in texts]
 
